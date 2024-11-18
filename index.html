@@ -4,620 +4,519 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HOLLYS</title>
+  <title>할리스 HOLLYS</title>
 
-  <link rel="stylesheet" href="css/font.css">
   <link rel="shortcut icon" href="img/common/favicon.ico" type="image/x-icon">
 
-  <meta name="format-detection" content="telephone=no, email=no">
+  <link rel="stylesheet" href="css/font.css">
+
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/swiper-bundle.min.css">
 
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 
-  <link rel="stylesheet" href="css/reset.css">
-  <link rel="stylesheet" href="css/swiper-bundle.min.css">
-  <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css">
-  <link rel="stylesheet" href="css/main.css">
+  <script src="js/jquery-3.7.1.min.js"></script>
+  <script src="js/swiper-bundle.min.js"></script>
+  <script src="js/main.js"></script>
 
-  <script defer src="js/jquery-3.7.1.min.js"></script>
-  <script defer src="js/swiper-bundle.min.js"></script>
-  <!-- js의 기본 값은 상위에 적는 것이 일반적-->
-  <script defer src="js/main.js"></script>
 
 </head>
 
 <body>
   <div id="wrap">
-    <!-- HEADER -->
+    <!-- header -->
     <header id="header">
       <div class="inner">
-        <h1><a href="#"><img src="img/common/logo_txt.png" alt="할리스 로고"></a></h1>
 
-        <nav>
-          <ul class="gnb">
-            <li><a href="#">HOLLYS</a>
-              <ul class="depth2">
-                <li><a href="#" class="hollys">About HOLLYS</a></li>
-                <li><a href="#">매장 검색</a></li>
-                <li><a href="#">채용 안내</a></li>
-                <li><a href="#">B2B 사업 소개</a></li>
-                <li><a href="#">가맹 문의 및 절차</a></li>
-              </ul>
-            </li>
-            <li><a href="#">메뉴</a>
-              <ul class="depth2">
-                <li><a href="#">커피</a></li>
-                <li><a href="#">음료</a></li>
-                <li><a href="#">푸드 </a></li>
-                <li><a href="#">MD상품</a></li>
-              </ul>
-            </li>
-            <li><a href="#">멤버십</a>
-              <ul class="depth2">
-                <li><a href="#">멤버십 혜택 </a></li>
-                <li><a href="#">스마트 오더</a></li>
-              </ul>
-            </li>
-            <li><a href="#">새로운 소식</a>
-              <ul class="depth2">
-                <li><a href="#">공지 </a></li>
-                <li><a href="#">이벤트</a></li>
-              </ul>
-            </li>
-          </ul>
-          <div class="depth2_bg"></div>
+        <nav class="gnb">
+          <a href="#" class="ham">
+            <img class="nomal" src="img/icon_ham.png" alt="전체 메뉴 보기">
+            <img class="hover" src="img/icon_ham_hover.png" alt="전체 메뉴 보기">
+          </a>
 
-          <div class="mgnb_btn">
-            <button class="bi bi-list ham" aria-label="모바일 메뉴 열기"></button>
-            <button class="bi bi-x-lg close" aria-label="모바일 메뉴 닫기"></i></button>
+          <a href="#" class="login">
+            <img class="nomal" src="img/icon_user.png" alt="로그인/회원가입">
+            <img class="hover" src="img/icon_user_hover.png" alt="로그인/회원가입">
+          </a>
+
+          <div class="mgnb_wrap">
+
+            <div class="tit"><img src="img/common/logo.png" alt="할리스"></div>
+
+            <div class="m_gnb_inner">
+              <ul class="m_gnb">
+                <li><a href="#">HOLLYS</a>
+                  <ol class="m_depth2">
+                    <li><a href="#">할리스이야기</a></li>
+                    <li><a href="#">B2B사업소개</a></li>
+                    <li><a href="#">가맹문의및절차</a></li>
+                    <li><a href="#">매장검색</a></li>
+                    <li><a href="#">채용안내</a></li>
+                  </ol>
+                </li>
+
+                <li><a href="#">메뉴</a>
+                  <ol class="m_depth2">
+                    <li><a href="#">커피</a></li>
+                    <li><a href="#">음료</a></li>
+                    <li><a href="#">푸드</a></li>
+                    <li><a href="#">MD상품</a></li>
+                  </ol>
+                </li>
+
+                <li><a href="#">멤버십</a>
+                  <ol class="m_depth2">
+                    <li><a href="#">멤버십혜택</a></li>
+                    <li><a href="#">스마츠오더</a></li>
+                  </ol>
+                </li>
+
+                <li><a href="#">새소식</a>
+                  <ol class="m_depth2">
+                    <li><a href="#">공지</a></li>
+                    <li><a href="#">이벤트</a></li>
+                  </ol>
+                </li>
+              </ul>
+            </div><!--//m_gnb_inner-->
+
+            <button type="button" class="mgnb_close bi bi-x-lg"></button>
+
           </div>
-
         </nav>
 
-        <ul class="util">
-          <li><a href="#">로그인&#47;회원가입</a></li>
-          <li><a href="#" class="bi bi-search search"></a></li>
-          <li>
-            <a href="#" class="bi bi-globe-americas lang"></a>
-            <!-- <a href="#" class="ko">KO</a>
-              <a href="#" class="en">EN</a> -->
-          </li>
-        </ul>
-      </div><!--inner-->
+        <h1><a href="#"><img src="img/common/logo.png" alt="할리스 로고"></a></h1>
+
+        <a href="#" class="shop">
+          <p>SHOP</p>
+        </a>
+
+      </div><!--//inner-->
     </header>
 
-    <ul class="mgnb_wrap">
-      <li><a href="#">HOLLYS</a>
-        <ul class="mdepth2">
-          <li><a href="#" class="hollys">About HOLLYS</a></li>
-          <li><a href="#">매장 검색</a></li>
-          <li><a href="#">채용 안내</a></li>
-          <li><a href="#">B2B 사업 소개</a></li>
-          <li><a href="#">가맹 문의 및 절차</a></li>
-        </ul>
-      </li>
-      <li><a href="#">메뉴</a>
-        <ul class="mdepth2">
-          <li><a href="#">커피</a></li>
-          <li><a href="#">음료</a></li>
-          <li><a href="#">푸드 </a></li>
-          <li><a href="#">MD상품</a></li>
-        </ul>
-      </li>
-      <li><a href="#">멤버십</a>
-        <ul class="mdepth2">
-          <li><a href="#">멤버십 혜택 </a></li>
-          <li><a href="#">스마트 오더</a></li>
-        </ul>
-      </li>
-      <li><a href="#">새로운 소식</a>
-        <ul class="mdepth2">
-          <li><a href="#">공지 </a></li>
-          <li><a href="#">이벤트</a></li>
-        </ul>
-      </li>
-    </ul>
-
-    <!-- MAIN -->
+    <!-- main -->
     <main id="main">
-      <!-- MAIN_VISUAL -->
+
+      <!-- main_visual -->
       <section id="main_visual">
-        <div class="swiper mv">
+
+        <div class="swiper main_banner">
           <ul class="swiper-wrapper">
-            <li class="swiper-slide">
-              <img src="img/main/mv02.png" alt="" class="mv">
-              <img src="img/main/mv02_s.png" alt="" class="mv_s">
-              <h3>상큼한 <strong>자몽</strong>에<br>
-                빠져보<strong>자몽</strong>!</h3>
-            </li>
-            <li class="swiper-slide red">
-              <img src="img/main/mv01.png" alt="" class="mv">
-              <img src="img/main/mv01_s.png" alt="" class="mv_s">
-              <h3>여름에 <strong>수박</strong>은<br>
-                끌릴 <strong>수 밖</strong>에~</h3>
-            </li>
+            <li class="swiper-slide visual_01"></li>
+            <li class="swiper-slide visual_02"></li>
+            <li class="swiper-slide visual_03"></li>
           </ul>
         </div>
-      </section>
 
-      <!-- BEST -->
-      <section id="best">
+        <div class="swiper-pasination"></div>
+        <div class="swiper-button-prev"></div>
+        <div class="swiper-button-next"></div>
+
+      </section> <!--//main_visual-->
+
+      <!-- quick_link -->
+      <section id="quick_link">
         <div class="inner">
-          <h2>best menu</h2>
-
-          <div class="swiper best_menu">
-            <ul class="swiper-wrapper">
-              <li class="swiper-slide">
-                <img src="img/main/best01.png" alt="B.E.L.T 호밀 샌드위치">
-                <a href="#">
-                  더블 햄치즈 크루아상
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <img src="img/main/best02.png" alt="푸딩에 바나나">
-                <a href="#">
-                  푸딩에 바나나
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <img src="img/main/best03.png" alt="에그마요">
-                <a href="#">
-                  에그마요
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <img src="img/main/best04.png" alt="햄치즈 스크램블 토스트">
-                <a href="#">
-                  햄치즈 스크램블 토스트
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <img src="img/main/best05.png" alt="치즈 에그 브리오슈">
-                <a href="#">
-                  치즈 에그 브리오슈
-                </a>
-              </li>
-              <li class="swiper-slide">
-                <img src="img/main/best06.png" alt="트러플 머쉬룸 수프볼">
-                <a href="#">
-                  트러플 머쉬룸 수프볼
-                </a>
-              </li>
-            </ul>
-          </div><!--//best_menu-->
-
-          <!-- <div class="contorl_box">
-            <div class="swiper-button-next next">
-              <i class="bi bi-arrow-right right"></i>
-            </div>
-
-            <div class="swiper-button-prev prev">
-              <i class="bi bi-arrow-left left"></i>
-            </div>
-          </div> -->
-          <!--//control_box-->
-
+          <div class="quick_con">
+            <h3>어디서든 할리스 !</h3>
+            <div class="icon_img mall"></div>
+            <a href="#" class="btn">할리스 몰</a>
+          </div>
+          <div class="quick_con">
+            <h3>다양한 혜택이 팡팡 ~</h3>
+            <div class="icon_img membership"></div>
+            <a href="#" class="btn">멤버십</a>
+          </div>
+          <div class="quick_con">
+            <h3>소중한 마음 전하기 ♥</h3>
+            <div class="icon_img giftcard"></div>
+            <a href="#" class="btn">기프트카드</a>
+          </div>
+          <div class="quick_con">
+            <h3>할리스F&B 파트너 모집</h3>
+            <div class="icon_img franchise"></div>
+            <a href="#" class="btn">가맹문의</a>
+          </div>
         </div><!--//inner-->
       </section>
 
-      <!-- STORE -->
+      <!-- menu -->
+      <section id="menu">
+        <div class="inner">
+          <h2>할리스 메뉴 둘러보기</h2>
+
+          <div class="tab_wrap">
+
+            <ul class="tab_btn">
+              <li class="menu_type">신메뉴</li>
+              <li class="menu_type">인기메뉴</li>
+              <li class="menu_type">디저트&식사</li>
+            </ul>
+
+            <ul class="tab_con">
+              <li class="cont">
+                <ol class="swiper-wrapper menu">
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/new_01.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/new_02.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/new_03.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/new_04.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                </ol>
+              </li><!--//cont-->
+
+              <li class="cont">
+                <ol class="swiper-wrapper menu">
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/best_01.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/best_02.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/best_03.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/best_05.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                </ol>
+              </li><!--//cont-->
+
+              <li class="cont">
+                <ol class="swiper-wrapper menu">
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/food_01.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/food_02.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/food_03.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                  <li class="swiper-slide menu_slide">
+                    <div class="menu_img">
+                      <img src="img/food_04.png" alt="메뉴 사진">
+                    </div>
+                    <a href="#">바닐라딜라이트크림라떼</a>
+                  </li>
+
+                </ol>
+              </li><!--//cont-->
+
+            </ul><!--//tab_con-->
+
+            <!-- 
+            <button type="button" class="swiper-button-next"></button>
+            <button type="button" class="swiper-button-prev"></button> -->
+
+          </div><!--tab_wrap-->
+        </div><!--inner-->
+      </section>
+
+      <!-- hollys_store -->
       <section id="store">
         <div class="inner">
-          <h2><a href="#">hollys store<i class="bi bi-arrow-right"></i></a></h2>
-          <p>다양한 라이프 스타일을 담은 할리스 매장을 구경해보세요.</p>
-
-          <ul class="store_list">
-            <li><a href="#">
-                <img src="img/main/store01.png" alt="시원한 매력 가득 담은 오션뷰 매장">
-                <div class="deemed">
-                  <p><span>시원한 매력 가득 담은</span><br>
-                    <strong>오션뷰 매장</strong>
-                  </p>
+          <h2>할리스 매장 둘러보기</h2>
+          <div class="store_list">
+            <ul class="swiper-wrapper">
+              <li class="swiper-slide">
+                <div class="img">
+                  <img src="img/store_02.jpg" alt="한옥 이미지">
                 </div>
-              </a></li>
-            <li><a href="#">
-                <img src="img/main/store02.png" alt="반려동물 동반 가능 매장">
-                <div class="deemed">
-                  <p><span>552만 반려 가족들을 위한</span><br>
-                    <strong>펫 프렌들리</strong>
-                  </p>
+                <p>한국 정취 가득한 한옥 매장</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="img">
+                  <img src="img/store_01.jpg" alt="반려견 이미지">
                 </div>
-              </a></li>
-            <li><a href="#">
-                <img src="img/main/store03.png" alt="한옥 매장">
-                <div class="deemed">
-                  <p><span>한국 정취를 머금은</span><br>
-                    <strong>한옥 매장</strong>
-                  </p>
+                <p>반려동물 동반 가능</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="img">
+                  <img src="img/store_03.jpg" alt="파도 이미지">
                 </div>
-              </a></li>
-          </ul>
-        </div><!--//inner-->
+                <p>탁 트인 시야 오션뷰</p>
+              </li>
+              <li class="swiper-slide">
+                <div class="img">
+                  <img src="img/store_02.jpg" alt="한옥 이미지">
+                </div>
+                <p>한국 정취 가득한 한옥 매장</p>
+              </li>
+            </ul>
+
+            <div class="controller">
+              <div class="swiper-button-next next bi bi-chevron-right"></div>
+              <div class="swiper-button-prev prev bi bi-chevron-left"></div>
+            </div>
+
+          </div><!--//store_list-->
+        </div>
       </section>
 
-      <!-- NEW -->
-      <section id="new">
+      <!-- about_hollys -->
+      <section id="about">
+
+        <div class="swiper_about">
+          <ol class="swiper-wrapper">
+
+            <li class="swiper-slide">
+              <div class="left_box">
+                <h3>우리나라 최초 커피 전문점</h3>
+                <div class="txt_box">
+                  <p>할리스는 1999년 6월 한국 최초로<br>
+                    에스프레스 전문점을 오픈한 커피 전문 브랜드입니다.</p>
+                </div>
+                <a href="#">할리스몰</a>
+              </div><!--//left_box-->
+              <div class="right_box">
+                <img src="img/about01.png" alt="에스프레소 사진">
+              </div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="left_box">
+                <h3>체계적인 운영 시스템</h3>
+                <div class="txt_box">
+                  <p>지난 20년간의 커피 전문점 브랜드 <br>
+                    운영 노하우를 통해 철저하게 관리합니다.</p>
+                </div>
+                <a href="#">할리스몰</a>
+              </div><!--//left_box-->
+              <div class="right_box">
+                <img src="img/about02.png" alt="에스프레소 사진">
+              </div>
+            </li>
+
+            <li class="swiper-slide">
+              <div class="left_box">
+                <h3>창업 자금 지원 대출</h3>
+                <div class="txt_box">
+                  <p>할리스 매장 예비 창업자 대상<br>
+                    창업자금 최대 1억원 대출 지원</p>
+                </div>
+                <a href="#">할리스몰</a>
+              </div><!--//left_box-->
+              <div class="right_box">
+                <img src="img/about03.jpg" alt="에스프레소 사진">
+              </div>
+            </li>
+
+          </ol>
+        </div>
+
+        <div class="pagination">
+          <button class="next swiper-button-next"></button>
+          <button class="prev swiper-button-prev"></button>
+        </div>
+
+      </section>
+
+      <!-- hollys_competitive -->
+      <section id="competitive">
         <div class="inner">
-          <div class="prd_txt">
-            <h2>new</h2>
-            <p>시즌 한정 과일 메뉴 먹으며<br>
-              시원 달달한 여름 나기 시작</p>
-          </div>
-
-          <div class="prd_list">
-
-            <div class="prd_col">
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new01.png" alt="리얼 수박 생과일 주스">
-                  <div class="i_name">
-                    <em>리얼 수박 생과일 주스</em>
-                  </div>
-                </a>
-              </div>
-
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new02.png" alt="논알콜 자몽 하이볼">
-                  <div class="i_name">
-                    <em>논알콜 자몽 하이볼</em>
-                  </div>
-                </a>
-              </div>
-
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new03.png" alt="논알콜 자몽 하이볼">
-                  <div class="i_name">
-                    <em>유자 블로썸 오로라 티</em>
-                  </div>
-                </a>
-              </div>
-            </div><!--//prd_col-->
-
-            <div class="prd_col">
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new04.png" alt="유자 블로썸 오로라 티 ">
-                  <div class="i_name">
-                    <em>애플 망고 치즈 빙수</em>
-                  </div>
-                </a>
-              </div>
-
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new05.png" alt="눈꽃 팥빙수">
-                  <div class="i_name">
-                    <em>봉주르 딸기 치즈 빙수</em>
-                  </div>
-                </a>
-              </div>
-
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new06.png" alt="눈꽃 팥빙수">
-                  <div class="i_name">
-                    <em>눈꽃 팥빙수</em>
-                  </div>
-                </a>
-              </div>
-              <a href="#" class="more_btn">더보기</a>
-            </div><!--//prd_col-->
-
-            <div class="prd_col">
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new07.png" alt="상큼한 복숭아 생크림 케이크">
-                  <div class="i_name">
-                    <em>복숭아 생크림 케이크</em>
-                  </div>
-                </a>
-              </div>
-
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new08.png" alt="블루베리 치즈 케이크 ">
-                  <div class="i_name">
-                    <em>블루베리 치즈 케이크 </em>
-                  </div>
-                </a>
-              </div>
-
-              <div class="prd_item">
-                <a href="#">
-                  <img src="img/main/new09.png" alt="푸딩에 바나나">
-                  <div class="i_name">
-                    <em>푸딩에 바나나</em>
-                  </div>
-                </a>
-              </div>
-            </div><!--//prd_col-->
-          </div><!--//prd_list-->
-
-        </div><!--//inner-->
-
-      </section>
-
-      <!-- MALL -->
-      <section id="mall">
-        <div class="inner">
-          <div class="tit_box">
-            <a href="#">
-              <h2>hollys mall</h2>
-              <i class="bi bi-arrow-right right"></i>
-            </a>
-          </div>
-          <ul class="prd_list">
-            <li>
-              <img src="img/main/prd01.png" alt="(캡슐) 시그니처 블렌드 10개입">
-              <a href="#">
-                <dl>
-                  <dt><span>캡슐</span> <br>
-                    시그니처 블렌드 10개입</dt>
-                  <dd>균형잡힌 바디와 부드럽고 중후한 풍미<br>
-                  </dd>
-                </dl>
-              </a>
+          <h2>Performance</h2>
+          <ul class="cotents">
+            <li class="compet">
+              <div class="icon_01 icon"></div>
+              <p>설립연도</p>
+              <h4>1999<span>년</span></h4>
             </li>
-            <li>
-              <img src="img/main/prd02.png" alt="(캡슐) 이클립스 블렌드 10개입">
-              <a href="#">
-                <dl>
-                  <dt><span>캡슐</span> <br>
-                    이클립스 블렌드 10개입</dt>
-                  <dd>다크초콜릿, 아몬드의 고소하고 산뜻한 풍미</dd>
-                </dl>
-              </a>
+            <li class="compet">
+              <div class="icon_02 icon"></div>
+              <p>2023 매출액</p>
+              <h4>1,437<span>억</span></h4>
             </li>
-            <li>
-              <img src="img/main/prd03.png" alt="(캡슐) 디카페인 블렌드 10개입">
-              <a href="#">
-                <dl>
-                  <dt><span>캡슐</span> <br>
-                    디카페인 블렌드 10개입</dt>
-                  <dd>견과류의 고소함, 부드럽고 중후한 풍미<br>
-                    <span>네스프레소 호환</span>
-                  </dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <img src="img/main/prd04.png" alt="(캡슐) 블랙아리아 블렌드 10개입">
-              <a href="#">
-                <dl>
-                  <dt><span>캡슐</span> <br>
-                    블랙아리아 블렌드 10개입</dt>
-                  <dd>과일과 베리향의 조화로운 풍미<br>
-                    <span>네스프레소 호환</span>
-                  </dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <img src="img/main/prd05.png" alt="봉주르 파리 미니저그(크림)">
-              <a href="#">
-                <dl>
-                  <dt>봉주르 파리 미니저그</dt>
-                  <dd>넉넉한 용량과 스트랩으로 야외활동에 딱!</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <img src="img/main/prd06.png" alt="봉주르 파리 미니저그(블루)">
-              <a href="#">
-                <dl>
-                  <dt>봉주르 파리 미니저그</dt>
-                  <dd>넉넉한 용량과 스트랩으로 야외활동에 딱!</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <img src="img/main/prd07.png" alt="봉주르 파리 콜드컵(하트)">
-              <a href="#">
-                <dl>
-                  <dt>봉주르 파리 콜드컵</dt>
-                  <dd>반짝이는 러블리 에펠탑 포인트</dd>
-                </dl>
-              </a>
-            </li>
-            <li>
-              <img src="img/main/prd08.png" alt="봉주르 파리 콜드컵(에펠탑)">
-              <a href="#">
-                <dl>
-                  <dt>봉주르 파리 콜드컵</dt>
-                  <dd>반짝이는 러블리 하트 포인트</dd>
-                </dl>
-              </a>
-            </li>
-          </ul>
-          <a href="#" class="more_btn">더보기</a>
-        </div><!--//inner-->
-      </section>
-
-      <!-- PROMOTE -->
-      <section id="promote">
-        <div class="inner">
-
-          <div class="container">
-            <div class="left">
-              <p>마음을 전하는 할리스</p>
-              <h3>기프트 카드</h3>
-              <div class="img_box">
-                <img src="img/main/giftcard.png" alt="마음을 전하는 할리스 기프트 카드">
-              </div>
-              <a href="#" class="more_btn">더보기</a>
-            </div>
-
-            <div class="right">
-              <div class="img_box">
-                <img src="img/main/crown.png" alt="멤버십의 다양한 혜택 크라운">
-              </div>
-              <p>멤버십의 다양한 혜택</p>
-              <h3>CROWN</h3>
-              <a href="#" class="more_btn">더보기</a>
-            </div>
-          </div>
-
-        </div><!--//inner-->
-      </section>
-
-      <!--FRANCHISE-->
-      <section id="franchise">
-        <div class="inner">
-          <div class="franchise_txt">
-            <div class="franchise_img">
-              <img src="img/main/with01.png" alt="우리나라 최초 커피 전문점 ">
-            </div>
-            <dl>
-              <dt>우리나라 최초 커피 전문점</dt>
-              <dd> 할리스는 1998년 6월 한국 최초로<br class="none">
-                에스프레소 전문점을 오픈한 커피 전문 브랜드입니다.</dd>
-            </dl>
-          </div>
-          <div class="franchise_txt">
-            <dl>
-              <dt>체계적인 운영 시스템</dt>
-              <dd>지난 20년간의 커피 전문점 브랜드 운영 노하우를 통해
-                철저하게 관리합니다.</dd>
-            </dl>
-            <div class="franchise_img">
-              <img src="img/main/with02.png" alt="체계적인 운영 시스템">
-            </div>
-          </div>
-          <div class="franchise_txt">
-            <div class="franchise_img">
-              <img src="img/main/with03.png" alt="창업 자금 지원 대출">
-            </div>
-            <dl>
-              <dt>창업 자금 지원 대출</dt>
-              <dd>할리스 매장 예비 창업자 대상<br class="none">
-                창업자금 최대 1억원 대출 지원</dd>
-            </dl>
-          </div>
-          <a href="#" class="more_btn">더보기</a>
-        </div><!--//inner-->
-      </section>
-
-      <!-- NOTICE -->
-      <section id="notice">
-        <div class="inner">
-
-          <div class="news">
-            <div class="tit_box">
-              <h2>notice</h2>
-              <i class="bi bi-arrow-right right"></i>
-            </div>
-            <a href="#">
-              <p>&#91;공고&#93; 제3자 배정 유상증자 신주발행 공고</p>
-              2022-05-03
-            </a>
-            <a href="#">
-              <p>개인정보 처리 방침 개정 안내</p>
-              2024-05-17
-            </a>
-            <a href="#">
-              <p>&#91;공고&#93; 제 19기 주식회사 케이지할리스에프앤비 결산공고</p>
-              2022-03-19
-            </a>
-            <a href="#">
-              <p>&#91;멤버십 안내&#93; 멤버십 등급 혜택 변경 안내</p>
-              2022-03-08
-            </a>
-            <a href="#">
-              <p>&#91;제휴 안내&#93; 24년 SKT 0청년요금제 사용 매장 안내</p>
-              2022-12-29
-            </a>
-          </div><!--//news-->
-
-          <div class="b2b">
-            <div class="tit_box">
-              <h2>b2b solution</h2>
-              <i class="bi bi-arrow-right right"></i>
-            </div>
-            <p>할리스 F&#38;B는 20년의 커피 노하우를 기반으로 <br>
-              다양한 B2B 영역에서 프리미엄 커피 서비스를 제공합니다.</p>
-            <ol>
-              <li><a href="#">오피스 커피 서비스</a></li>
-              <li><a href="#">기업 사내카페 컨설팅</a></li>
-              <li><a href="#">신채널 유통</a></li>
-            </ol>
-          </div><!--//b2b-->
-
-        </div><!--//inner-->
-      </section>
-
-      <!-- EVENT -->
-      <section id="event">
-        <div class="swiper event_banner">
-          <ul class="swiper-wrapper">
-            <li class="swiper-slide f_banner">
-              <a href="#"><img src="img/main/f_ba01.jpg" alt=""></a>
-            </li>
-            <li class="swiper-slide f_banner">
-              <a href="#"><img src="img/main/f_ba02.jpg" alt=""></a>
-            </li>
-            <li class="swiper-slide f_banner">
-              <a href="#"><img src="img/main/f_ba03.jpg" alt=""></a>
-            </li>
-            <li class="swiper-slide f_banner">
-              <a href="#"><img src="img/main/f_ba04.jpg" alt=""></a>
+            <li class="compet">
+              <div class="icon_03 icon"></div>
+              <p>2023 영업 이익</p>
+              <h4>89.9<span>억</span></h4>
             </li>
           </ul>
         </div>
       </section>
 
-      <!-- FOOTER -->
-      <footer id="footer">
+      <!-- store_search -->
+      <section id="search">
         <div class="inner">
 
-          <div class="right">
-            <div class="f_nav">
-              <span><a href="#">개인정보처리방침</a> </span>
-              <span><a href="#">서비스이용약관</a> </span>
-              <span><a href="#">멤버십이용약관</a> </span> <br class="none">
-              <span><a href="#">할리스카드이용약관</a> </span>
-              <span><a href="#">가맹문의</a> </span>
-              <span><a href="#">고객문의</a> </span>
-              <span><a href="#">고객설문</a> </span>
-              <span><a href="#">사이트맵</a> </span>
-              <span><a href="#">BI소개</a> </span>
-            </div>
+          <div class="tit_box">
+            <h2>매장 찾기</h2>
+            <p>가까운 할리스 매장을 검색해보세요!</p>
+          </div>
 
-            <div class="f_info">
-              <span>법인명&#58; &#40;주&#41; 케이지할리스에프앤비</span>
-              <span>대표자&#58; 이종현</span>
-              <span>사업자등록번호&#58; 211-87-61044</span>
-              <span>통신판매업&#58; 제2019-서울종로-0193호</span>
-            </div>
-          </div><!--//right-->
-
-          <div class="left">
-            <address>
-              주소 서울특별시 중구 통일로 92&#44; 9층&#40;순화동, 케이지타워&#41;<br>
-              <a href="tel:02-2188-7100">
-                <span>대표전화&#58; 02-2188-7100</span><br>
-              </a>
-              <a href="#">가맹문의&#58; 02-6350-7229</a>
-            </address>
-            COPYRIGHT &#169; KG HOLLYS F&#38;B. All Rights Reserved
+          <div class="search_box">
+            <label for="search_store">
+              <input type="text" id="search_store" placeholder="지역, 지점 검색">
+            </label>
+            <img src="img/icon_searh.png" alt="돋보기 아이콘">
           </div>
         </div><!--//inner-->
-      </footer>
+      </section>
+
+      <!-- notice/event -->
+      <section id="notice">
+        <div class="inner">
+          <h2>새소식 · 이벤트</h2>
+          <ol class="news">
+            <li class="news_list">
+              <div class="left">
+                <div class="type">이벤트</div>
+                <p>공지/이벤트 제목</p>
+              </div>
+              <span>2021.10.08</span>
+            </li>
+            <li class="news_list">
+              <div class="left">
+                <div class="type">이벤트</div>
+                <p>공지/이벤트 제목</p>
+              </div>
+              <span>2021.10.08</span>
+            </li>
+            <li class="news_list">
+              <div class="left">
+                <div class="type">이벤트</div>
+                <p>공지/이벤트 제목</p>
+              </div>
+              <span>2021.10.08</span>
+            </li>
+          </ol>
+        </div>
+      </section>
+
     </main>
 
-    <div class="go_top"> <span>맨위로</span>
-      <a href="#header" class="bi bi-arrow-up up"></a>
-    </div>
+    <!-- footer -->
+    <footer id="footer">
+      <div class="inner">
 
-  </div>
+        <div class="f_top">
+          <div class="left_box">
+            <div class="f_logo">
+              <img src="img/common/f_logo.png" alt="할리스 로고">
+            </div>
 
-  <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
-  <script>
-    AOS.init({
-      duration: 1500,
-    });
-  </script>
+            <div class="corporate">
+              <a href="tel:+02-2188-7100">대표전화 02-2188-7100 </a>
+              <a href="tel:+02-6350-7229">가맹문의 02-6350-7229</a>
+              <address>서울특별시 중구 통일로 92, 9층(순화동, 케이지타워)</address>
+            </div>
 
+            <div class="sns">
+              <a href="#">INSTAGRAM</a>
+              <a href="#">YOUTUBE</a>
+            </div>
+          </div><!--//left_box-->
+
+          <div class="f_menu">
+            <ol class="f_gnb">
+              <li>
+                <ul>
+                  <li class="f_gnb_tit">HOLLYS</li>
+                  <li class="f_depth2">할리스이야기</li>
+                  <li class="f_depth2">매장검색</li>
+                  <li class="f_depth2">채용안내</li>
+                  <li class="f_depth2">B2B사업소개</li>
+                  <li class="f_depth2">가맹문의및절차</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li class="f_gnb_tit">메뉴</li>
+                  <li class="f_depth2">커피</li>
+                  <li class="f_depth2">음료</li>
+                  <li class="f_depth2">푸드</li>
+                  <li class="f_depth2">MD상품</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li class="f_gnb_tit">멤버십</li>
+                  <li class="f_depth2">멤버십혜택</li>
+                  <li class="f_depth2">스마트오더</li>
+                </ul>
+              </li>
+              <li>
+                <ul>
+                  <li class="f_gnb_tit">새소식</li>
+                  <li class="f_depth2">공지</li>
+                  <li class="f_depth2">이벤트</li>
+                </ul>
+              </li>
+            </ol>
+          </div>
+        </div><!--//f_top-->
+
+        <div class="f_bottom">
+          <div class="copy">COPYRIGHT (C) KG HOLLYS F&B. All Rights Reserved</div>
+          <div class="info">
+            <p>법인명: <span>(주)케이지할리스에프앤비</span></p>
+            <p>대표자: <span>이종현</span></p>
+            <p>사업자등록번호: <span>211-87-61044</span></p>
+            <p>통신판매업: <span>제2019-서울종로-0193호</span></p>
+          </div>
+        </div>
+
+      </div><!--//inner-->
+    </footer>
+
+    <!-- go_top -->
+    <div class="go_top">
+      <a href="#main_visual">맨 위로</a>
+    </div><!--//go_top-->
+
+  </div><!--//wrap-->
 </body>
 
 </html>
