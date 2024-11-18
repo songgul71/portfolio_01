@@ -3,7 +3,8 @@
 * 
 {box-sizing: border-box; margin: 0; padding: 0;}
 
-html{font-size: 62.5%;}
+html
+{font-size: 62.5%;}
 
 img
 {vertical-align: top; border: 0;}
@@ -12,7 +13,10 @@ a
 {text-decoration: none; color: #222;}
 
 ol, ul 
-{list-style: none; margin: 0; padding: 0;}
+{list-style: none;}
+
+button
+{border: 0; background: transparent;}
 
 table 
 {border-collapse: collapse; width: 100%;}
