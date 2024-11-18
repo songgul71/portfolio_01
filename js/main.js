@@ -1,97 +1,137 @@
+$(function () {
 
-$(function () { //문서준비 이벤트 시작 
+  // 전체 메뉴 보기
+  $(".mgnb_wrap").hide();
 
-  //-- HEADER
-  $(".depth2,.depth2_bg").hide();
-
-  $(".gnb>li").mouseenter(function () {
-    let hover = $(this).find(".depth2");
-    $("#header").addClass("active");
-    hover.stop().fadeIn();
-    $(".depth2_bg").stop().fadeIn();
+  $(".ham").click(function () {
+    $(".mgnb_wrap").fadeIn();
   });
 
-  $(".gnb>li").mouseleave(function () {
-    let hover = $(this).find(".depth2");
-    $("#header").removeClass("active");
-    hover.stop().fadeOut();
-    $(".depth2_bg").stop().fadeOut();
-  });
-
-  // M GNB
-  $(".mgnb_btn .ham").click(function () {
-    $(".mgnb_wrap, .mgnb_btn .close").stop().fadeIn();
-    $(".mgnb_btn .ham, .up").hide();
-  });
-  $(".mgnb_btn .close").click(function () {
-    $(".mgnb_wrap, .mgnb_btn .close").stop().fadeOut();
-    $(".mgnb_btn .ham, .up").stop().fadeIn();
+  $(".mgnb_close").click(function () {
+    $(".mgnb_wrap").fadeOut();
   });
 
 
-  //-- BEST MENU --//
-  const best_menu = new Swiper(".best_menu", {
+  $(".m_gnb > li").click(function () {
+    $(this).find(".m_depth2").slideDown();
+  });
 
+  // 메인 비주얼
+  const main_banner = new Swiper('.main_banner', {
     loop: true,
     centeredSlides: true,
+    slidesPerView: 1,
 
     autoplay: {
       delay: 3000,
-      disableOnIneraction: false,
-    },
-
-    speed: 1000,
-    slidesPerView: 1, //모바일 기준
-    spaceBetween: 0, //모바일 기준
-
-    pagination: {
-      el: ".swiper-pagination",
-      type: "fraction", // "bullets", "fraction", "progressbar"
-      clickable: true, // false(기본값) 클릭가능여부
+      disableOnInteraction: false,
     },
 
     navigation: {
-      nextEl: ".swiper-button-next",
-      prevEl: ".swiper-button-prev",
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
+    },
+
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true, // false(기본값) 클릭가능여부
+    },
+  });
+
+  // 메뉴 탭
+  $(".tab_con .cont").not(":first").hide();
+
+  $(".tab_btn li").click(function () {
+    let num = $(this).index();
+    $(".tab_con>li").eq(num).show().siblings().hide();
+    $(".menu_type").eq(num).addClass('active').siblings().removeClass('active');
+  });
+
+  // 메뉴 탭 슬라이드
+  const tab_con = new Swiper('.cont', {
+    loop: true,
+    slidesPerView: 1,
+    spaceBetween: 80,
+
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    // navigation: {
+    //   nextEl: '.swiper-button-next',
+    //   prevEl: '.swiper-button-prev',
+    // },
+
+    // pagination: {
+    //   el: ".swiper-pagination",
+    //   type: "bullets",
+    //   clickable: true,
+    // },
+
+    breakpoints: {
+      768: {
+        slidesPerView: 3,
+        spaceBetween: 20,
+      }
+    }
+
+  });
+
+  // 할리스 매장 슬라이드
+  const swiperNewsletter = new Swiper(".store_list", {
+    autoplay: {
+      delay: 3000,
+      disableOnInteraction: false,
+    },
+
+    slidesPerView: 1.5,
+    centeredSlides: true,
+    loop: true,
+
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
 
     breakpoints: {
-      768: { //min-width 기준
+      768: {
         slidesPerView: 3,
-        spaceBetween: 30,
-      },
-      1200: { //min-width 기준
-        slidesPerView: 5,
-        spaceBetween: 120,
-      },
-    },
+        spaceBetween: 21,
+      }
+    }
   });
 
-  //--  EVENT  --//
-  const event_banner = new Swiper(".event_banner", {
-
+  // 할리스 경쟁력 슬라이드
+  const left_box = new Swiper('.swiper_about', {
     loop: true,
+    centeredSlides: true,
+    slidesPerView: 1,
+
     autoplay: {
       delay: 3000,
-      disableOnIneraction: false,
-      centeredSlides: true,
+      disableOnInteraction: false,
     },
 
-    speed: 1000,
-    slidesPerView: 1, //모바일 기준
-    spaceBetween: 0, //모바일 기준
-
-  });
-
-  //-- MAIN VISUAL --//
-  const mv = new Swiper(".mv", {
-    loop: true,
-    autoplay: {
-      delay: 3000,
-      disableOnIneraction: false,
+    navigation: {
+      nextEl: '.swiper-button-next',
+      prevEl: '.swiper-button-prev',
     },
-    speed: 1500,
+
+    pagination: {
+      el: ".swiper-pagination",
+      type: "bullets",
+      clickable: true, // false(기본값) 클릭가능여부
+    },
   });
+
+  const right_box = new Swiper('.right_box', {
+  }); //두개 연결할 거니까 그냥 기본 값으로만 두면 됨.
+
+  left_box.controller.control = right_box;
+  right_box.controller.control = left_box;
+  //각각의 슬라이드 작성한 후 가장 아래에 작성해야 두개가 연결 됨!
 
 
 });
