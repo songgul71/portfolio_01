@@ -171,7 +171,7 @@ nav { display: flex; align-items: center;}
 #menu h2::before {content: "Everyday Hollys";}
 #menu .tab_wrap {display: flex; flex-wrap: wrap; align-items: flex-end;}
 .tab_wrap .tab_btn {width: 25%; z-index: 3; background: #fefefe;}
-.tab_wrap .tab_con {width: 75%;}
+.tab_wrap .tab_con {width: 75%; overflow:hidden;}
 .tab_wrap .tab_con .swiper-wrapper {width: 100%;}
 
 .menu_type {font-size: 2.5rem; padding: 10px; margin-bottom: 37px; width: 210px; color: var(--sub-light); border-bottom: 1px solid var(--sub-light); cursor: pointer; transition: all 0.5s;}
