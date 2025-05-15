@@ -64,58 +64,7 @@ $(function () {
         spaceBetween: 20,
       }
     }
-
   });
-
-  // 할리스 매장 슬라이드
-  // const swiperNewsletter = new Swiper(".store_list", {
-  //   autoplay: {
-  //     delay: 3000,
-  //     disableOnInteraction: false,
-  //   },
-
-  //   slidesPerView: 1,
-  //   centeredSlides: true,
-  //   spaceBetween: 40,
-  //   loop: true,
-
-  //   navigation: {
-  //     nextEl: '.swiper-button-next',
-  //     prevEl: '.swiper-button-prev',
-  //   },
-
-  //   breakpoints: {
-  //     680: {
-  //       slidesPerView: 3,
-  //       spaceBetween: 21,
-  //     }
-  //   }
-  // });
-
-  // 할리스 경쟁력 슬라이드
-  // const left_box = new Swiper('.swiper_about', {
-  //   loop: true,
-  //   centeredSlides: true,
-  //   slidesPerView: 1,
-  //   speed: 1000,
-  //   loop: true,
-
-  //   pagination: {
-  //     el: ".swiper-pagination", //el=요소
-  //     type: "progressbar", // "bullets", "fraction", "progressbar"
-  //     clickable: true, // false(기본값) 클릭가능여부
-  //   },
-
-  //   navigation: {
-  //     nextEl: ".swiper-button-next",
-  //     prevEl: ".swiper-button-prev",
-  //   },
-
-  //   autoplay: {
-  //     delay: 3000,
-  //     disableOnInteraction: false,
-  //   },
-  // });
 
   //life_store
   $('#life_store ul li:nth-child(1)').addClass("active");
